@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Vital App</string>
+
+    <string name="action_prefs">Preferences</string>
+    <string name="btnStart">start service</string>
+    <string name="btnStop">stop service</string>
+    <string name="password">PIN</string>
+    <string name="passwordConf">Confirm PIN</string>
+    <string name="pinIncorrecto">Pin is Incorrect</string>
+    <string name="pinNotEqual">PIN does not match </string>
+    <string name="prefs">Preferences</string>
+    <string name="title_activity_main">Vital App</string>
+    <string name="userName">Username</string>
+    <string name="warningMsg">Warning</string>
+    <string name="actualizacoes">Updates</string>
+    <string name="syncFrequency">Sync Frequency</string>
+    <string name="pref_sync_frequency">Sync frequency</string>
+    <string name="pref_sync_frequency_summary">Set the sync frequency</string>
+    <string name="syncFrequency_day">Once a day</string>
+    <string name="syncFrequency_week">Once a Week</string>
+    <string name="syncFrequency_month">Onnce a Month</string>
+    <string name="syncFrequency_maually">Update maually</string>
+    <string name="pref_Alerts">Alerts</string>
+    <string name="pref_alerts_summary">Active automatic alerts</string>
+
+
+
+
+</resources>

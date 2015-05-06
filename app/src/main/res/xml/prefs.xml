@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/prefs">
+
+        <EditTextPreference
+            android:key="USERNAME_KEY"
+            android:title="@string/userName"
+            android:inputType="text"
+            android:summary="Correcção do Código de Médico"
+            />
+
+        <EditTextPreference
+            android:key="PASSWORD_KEY"
+            android:title="@string/password"
+            android:inputType="number"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/syncFrequency">
+
+       <CheckBoxPreference android:defaultValue="true" android:key="prefAlerts" android:title="@string/pref_Alerts" android:summary="@string/pref_alerts_summary" />
+
+
+        <ListPreference
+            android:key="prefSyncFrequency"
+            android:entries="@array/syncFrequency"
+            android:entryValues="@array/syncFrequencyValues"
+            android:summary="@string/pref_sync_frequency_summary"
+            android:defaultValue="3"
+            android:title="@string/pref_sync_frequency" />
+    </PreferenceCategory>
+
+
+
+
+
+</PreferenceScreen>

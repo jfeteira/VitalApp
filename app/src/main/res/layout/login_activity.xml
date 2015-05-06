@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.27"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/userName"
+            android:id="@+id/tvUserBName"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUserName"
+            android:layout_weight="1"
+            android:inputType="textCapCharacters"
+            android:lines="1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="60dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="191dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TableRow
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/tableRow1"
+            android:gravity="center_vertical">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="60dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="@string/password"
+                android:id="@+id/tvPin"
+                android:textAlignment="center" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPin"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:layout_weight="0.17"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:width="50dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="60dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/tabRowConf"
+            android:gravity="center_vertical">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="60dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:text="@string/passwordConf"
+                android:id="@+id/tvPinConf"
+                android:textAlignment="center" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPinConf"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:layout_weight="0.17"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:width="50dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="60dp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/btOK"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.27" />
+</LinearLayout>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VitalApp</string>
+    <string name="password">PIN</string>
+    <string name="prefs">Configurações</string>
+    <string name="userName">Utilizador</string>
+    <string name="passwordConf">Confirmação PIN</string>
+    <string name="pinNotEqual">Pins são diferentes</string>
+    <string name="warningMsg">Alerta</string>
+    <string name="pinIncorrecto">Pino Incorrecto</string>
+    <string name="title_activity_main">Vital App</string>
+    <string name="actualizacoes">Actualizações</string>
+    <string name="syncFrequency">Actualização dados</string>
+    <string name="pref_sync_frequency_summary">Escolha quantas vezes quer actualizar dados</string>
+    <string name="pref_sync_frequency">Frequência de Actualização</string>
+    <string name="syncFrequency_day">Uma vez por dia</string>
+    <string name="syncFrequency_month">Uma vez por Mês</string>
+    <string name="syncFrequency_week">Uma por Semana</string>
+    <string name="syncFrequency_maually">Actualização manual</string>
+    <string name="pref_Alerts">Alertas</string>
+    <string name="pref_alerts_summary">Alertas automaticos ligados</string>
+</resources>

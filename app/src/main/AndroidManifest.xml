@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pt.vitalaire.vitalapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".PreferencesActivity" />
+        <activity android:name=".PacientesMissingPrecsActivity" />
+        <activity android:name=".DadosRecitasFaltasActivity" />
+
+
+        <provider
+            android:name=".provider.PatientsProvider"
+            android:authorities="android.pt.vitalaire.vitalapp.provider.patientsprovider"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
+
+        <provider
+            android:name=".provider.PrescriptionsMissingProvider"
+            android:authorities="android.pt.vitalaire.vitalapp.provider.prescriptionsmissingprovider"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
+
+        <service
+            android:name=".GetPrescritionsMissingIntentService"
+            android:exported="false" >
+        </service>
+
+    </application>
+
+</manifest>
