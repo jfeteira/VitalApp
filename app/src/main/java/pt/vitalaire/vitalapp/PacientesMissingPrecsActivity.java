@@ -40,7 +40,7 @@ public class PacientesMissingPrecsActivity extends ListActivity {
         Intent intentToOpenDadosRecitasFaltasActivity = new Intent(getApplicationContext(), DadosRecitasFaltasActivity.class);
 
         intentToOpenDadosRecitasFaltasActivity.putExtra(DadosRecitasFaltasActivity.PATIENT_ID, ((TextView)v.findViewById(R.id.lbIdPaciente)).getText());
-       intentToOpenDadosRecitasFaltasActivity.putExtra(DadosRecitasFaltasActivity.PATIENT_NAME, ((TextView)v.findViewById(R.id.lbNomeUtente)).getText());
+        intentToOpenDadosRecitasFaltasActivity.putExtra(DadosRecitasFaltasActivity.PATIENT_NAME, ((TextView)v.findViewById(R.id.lbNomeUtente)).getText());
         intentToOpenDadosRecitasFaltasActivity.putExtra(DadosRecitasFaltasActivity.PATIENT_NUTENTE, ((TextView)v.findViewById(R.id.lbNumUtente)).getText());
 
         startActivity(intentToOpenDadosRecitasFaltasActivity);

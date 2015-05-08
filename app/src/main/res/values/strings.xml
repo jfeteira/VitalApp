@@ -22,8 +22,8 @@
     <string name="syncFrequency_maually">Update maually</string>
     <string name="pref_Alerts">Alerts</string>
     <string name="pref_alerts_summary">Active automatic alerts</string>
-
-
+    <string name="carregaDadosTitle">Notification Title</string>
+    <string name="carregaDadosMessage">Message Load Data</string>
 
 
 </resources>

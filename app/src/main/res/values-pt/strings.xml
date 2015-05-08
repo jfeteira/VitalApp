@@ -19,4 +19,6 @@
     <string name="syncFrequency_maually">Actualização manual</string>
     <string name="pref_Alerts">Alertas</string>
     <string name="pref_alerts_summary">Alertas automaticos ligados</string>
+    <string name="carregaDadosTitle">Titulo da Notoficação</string>
+    <string name="carregaDadosMessage">Dados foram carregados com Sucesso</string>
 </resources>

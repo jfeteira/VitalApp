@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-
+        startService(new Intent(getApplicationContext(), SetAlarmIntentService.class));
 
      //*... Botão para ver as Receitas em Atraso
         ImageButton btnPrecrMissing = (ImageButton) findViewById(R.id.btPrescriptionMissing);

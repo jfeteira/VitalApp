@@ -6,11 +6,11 @@
 
 
     <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginRight="60dp" />
+        android:layout_marginRight="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,11 +29,11 @@
     <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginRight="60dp" />
+            android:layout_marginRight="10dp" />
 
         <TextView
             android:layout_width="wrap_content"

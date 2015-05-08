@@ -22,7 +22,7 @@
 
 
         <ListPreference
-            android:key="prefSyncFrequency"
+            android:key="PREFSYNCFREQUENCY_KEY"
             android:entries="@array/syncFrequency"
             android:entryValues="@array/syncFrequencyValues"
             android:summary="@string/pref_sync_frequency_summary"

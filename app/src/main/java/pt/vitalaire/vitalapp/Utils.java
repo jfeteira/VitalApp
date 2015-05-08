@@ -2,6 +2,10 @@ package pt.vitalaire.vitalapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -107,4 +111,25 @@ public class Utils {
     }
 
 
+    /*
+    *  serve para saber se há ligação a Internet ou a Wifi
+    * */
+    public static boolean hasConnectivityInternet(ConnectivityManager xConnMgr){
+        NetworkInfo networkinfo =  xConnMgr.getActiveNetworkInfo();
+        return (networkinfo != null && networkinfo.isConnected());
+
+    }
+
+      /*
+    *  serve para saber se há ligação a Wifi
+    * */
+    /*
+    public static boolean hasConnectivityWifi(WifiManagerManager xConnWifi){
+        NetworkInfo networkinfo =  xConnMgr.getActiveNetworkInfo();
+        NetworkInfo networkinfo =  xConnMgr.getActiveNetworkInfo();
+
+        return (networkinfo != null && networkinfo.isConnected());
+
+    }
+*/
 }
