@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.net.URL;
 
@@ -35,7 +36,14 @@ public class MainActivity extends ActionBarActivity {
         btnPrecrMissing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(Utils.isNetworkAvailable( getApplicationContext())){
                 new getDataServer().execute();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Sem Internet", Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
 
@@ -45,7 +53,10 @@ public class MainActivity extends ActionBarActivity {
         btCallPrescriptionMissing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), PacientesMissingPrecsActivity.class));
+                //startActivity(new Intent(getApplicationContext(), PacientesMissingPrecsActivity.class));
+                startActivity(new Intent(getApplicationContext(), ListaPacientesFaltaActivity.class));
+
+
             }
         });
 
@@ -56,10 +67,13 @@ public class MainActivity extends ActionBarActivity {
     private class getDataServer extends AsyncTask<String, Integer, String> {
 
         protected String doInBackground(String... xMedico) {
-            try{
-                final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            try {
 
-                Utils.carregaDados(preferences.getString(PreferencesActivity.USERNAME_KEY, null), getApplicationContext());
+
+                    final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    Utils.carregaDados(preferences.getString(PreferencesActivity.USERNAME_KEY, null), getApplicationContext());
+
+
             }
             catch (Exception e) {
                 Log.d(LOG_TAG, e.toString());
@@ -70,6 +84,8 @@ public class MainActivity extends ActionBarActivity {
 
         protected void onPostExecute() {
             //super.onPostExecute(String xReturn);
+            Toast.makeText(getApplicationContext(), "Dados Carregados", Toast.LENGTH_SHORT).show();
+
 
         }
 

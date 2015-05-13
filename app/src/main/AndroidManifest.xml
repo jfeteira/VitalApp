@@ -3,6 +3,8 @@
     package="pt.vitalaire.vitalapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +24,10 @@
         <activity android:name=".PreferencesActivity" />
         <activity android:name=".PacientesMissingPrecsActivity" />
         <activity android:name=".DadosRecitasFaltasActivity" />
+        <activity android:name=".ListaPacientesFaltaActivity" />
+
+
+
 
         <provider
             android:name=".provider.PatientsProvider"
@@ -44,6 +50,7 @@
             android:name=".SetAlarmIntentService"
             android:exported="false" >
         </service>
+
     </application>
 
 </manifest>

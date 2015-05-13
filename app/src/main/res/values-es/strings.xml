@@ -21,4 +21,10 @@
     <string name="pref_alerts_summary">Alertas automaticos ligados</string>
     <string name="carregaDadosTitle">Titulo da Notoficação</string>
     <string name="carregaDadosMessage">Dados foram carregados com Sucesso</string>
+    <string name="utentenumero">Nº Utente</string>
+    <string name="utentenome">Nome</string>
+    <string name="title_activity_main_activity2">Total de Receitas em Falta</string>
+    <string name="utenterecfalta">Total de Receitas em Falta</string>
+    <string name="recfaltadeleteok">Registo foi removido com sucesso</string>
+    <string name="recfaltadeleteko">Não foi possivel remover o registo, tente mais tarde por favor</string>
 </resources>

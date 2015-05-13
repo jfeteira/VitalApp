@@ -1,111 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="2dp"
+    android:paddingRight="15dp">
 
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:columnCount="3"
-    android:orientation="horizontal"
-    android:rowCount="5" >
-
-    <Space
-        android:layout_gravity="fill"
-        android:layout_columnSpan="3"
-        android:layout_height="6dp"
-        android:layout_column="0"
-        android:layout_row="0" />
-    <Space
-        android:layout_gravity="fill"
-        android:layout_columnSpan="3"
-        android:layout_height="6dp"
-        android:layout_column="0"
-        android:layout_row="4" />
-    <Space
-        android:layout_gravity="fill"
-        android:layout_rowSpan="3"
-        android:layout_width="36dp"
-        android:layout_column="0"
-        android:layout_row="1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YYYYYYYYYYYY"
-        android:id="@+id/lbIdRec"
-        android:visibility="gone"
-        android:layout_column="0"
-        android:layout_row="1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YYYYYYYYYYYY"
-        android:id="@+id/lbTerapia"
-        android:layout_column="1"
-        android:layout_row="1"/>
-
-    <LinearLayout
+    <GridLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnCount="3"
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.1"
-        android:layout_column="1"
-        android:layout_row="2">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YYYYYYYYYYYY"
-        android:id="@+id/lbDt_INI"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" até "/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YYYYYYYYYYYY"
-        android:id="@+id/lbDt_FIM"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.1"
-        android:layout_column="1"
-        android:layout_row="3">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total de dias em falta: "
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YYYYYYYYYYYY"
-        android:id="@+id/lbMissingDay"/>
-    </LinearLayout>
+        android:rowCount="5"
+        android:background="@drawable/multitext_bottom">
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_row="1"
-        android:layout_rowSpan="3"
-        android:layout_gravity="right|center_vertical"
-        >
-        <ImageButton
+
+
+
+        <Space
+            android:layout_gravity="fill"
+            android:layout_columnSpan="3"
+            android:layout_height="6dp"
+            android:layout_column="0"
+            android:layout_row="0" />
+        <Space
+            android:layout_gravity="fill"
+            android:layout_columnSpan="3"
+            android:layout_height="6dp"
+            android:layout_column="0"
+            android:layout_row="4" />
+        <Space
+            android:layout_gravity="fill"
+            android:layout_rowSpan="3"
+            android:layout_width="36dp"
+            android:layout_column="0"
+            android:layout_row="1" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btDelete"
-            android:src="@drawable/ic_doc_delete"
-            android:layout_marginRight="15dp"
-            android:background="@null"/>
+            android:text="YYYYYYYYYYYY"
+            android:id="@+id/lbIdRec"
+            android:visibility="gone"
+            android:layout_column="0"
+            android:layout_row="1" />
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YYYYYYYYYYYY"
+            android:textStyle="bold"
+            android:id="@+id/lbTerapia"
+            android:layout_column="1"
+            android:layout_row="1"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_column="1"
+            android:layout_row="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YYYYYYYYYYYY"
+                android:id="@+id/lbDt_INI"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" até "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YYYYYYYYYYYY"
+                android:id="@+id/lbDt_FIM"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_column="1"
+            android:layout_row="3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total de dias em falta: "
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YYYYYYYYYYYY"
+                android:id="@+id/lbMissingDay"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_rowSpan="3"
+            android:layout_gravity="right|center_vertical"
+            >
+            <ImageButton
+                android:id="@+id/btDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_doc_delete"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="btClickOn"/>
+
+        </LinearLayout>
 
 
 
-</GridLayout>
+    </GridLayout>
+
+
+</LinearLayout>
+
+
+
 
 

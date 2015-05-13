@@ -29,14 +29,22 @@ public class SetAlarmIntentService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
 
+        alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
         try {
             final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
             Log.i(LOG_TAG, preferences.getString(PreferencesActivity.PREFSYNCFREQUENCY_KEY, "86400000"));
 
             Intent i = new Intent(getApplicationContext(), GetPrescritionsMissingIntentService.class);
-            PendingIntent pi = PendingIntent.getService(getApplicationContext(), 100, i, PendingIntent.FLAG_UPDATE_CURRENT);
-            alarmManager.set(AlarmManager.RTC_WAKEUP, Long.parseLong(preferences.getString(PreferencesActivity.PREFSYNCFREQUENCY_KEY, "86400000")), pi);
+            PendingIntent pi = PendingIntent.getService(getApplicationContext(), 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+            Long xTempoMilis = System.currentTimeMillis() + Long.parseLong(preferences.getString(PreferencesActivity.PREFSYNCFREQUENCY_KEY, "86400000"));
+
+            System.out.println("tempo em milis: " + xTempoMilis);
+
+            /*=======================================================================================
+            * para fazer o set do Alarm independente da API que estamos a usar
+            =========================================================================================*/
+            setAlarmBasedOnAPILevel(AlarmManager.RTC_WAKEUP, xTempoMilis, pi, alarmManager);
         }
         catch (Exception e)
         {
@@ -45,6 +53,13 @@ public class SetAlarmIntentService extends IntentService {
 
     }
 
+    private void setAlarmBasedOnAPILevel(int rtcWakeup, long timeToNotify, PendingIntent contentIntent,AlarmManager am){
+        int version = android.os.Build.VERSION.SDK_INT;
+        if(version>=19)
+            am.setExact(rtcWakeup, timeToNotify, contentIntent);
+        else
+            am.set(rtcWakeup, timeToNotify, contentIntent);
+    }
 
 
 }

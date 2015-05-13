@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.27"></LinearLayout>
+        android:layout_weight="0.15"></LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -78,7 +78,7 @@
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="191dp"
+        android:layout_height="116dp"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <TableRow
             android:layout_height="fill_parent"

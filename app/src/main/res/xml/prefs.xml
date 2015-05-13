@@ -18,7 +18,7 @@
 
     <PreferenceCategory android:title="@string/syncFrequency">
 
-       <CheckBoxPreference android:defaultValue="true" android:key="prefAlerts" android:title="@string/pref_Alerts" android:summary="@string/pref_alerts_summary" />
+       <CheckBoxPreference android:defaultValue="true" android:key="PREFALERTS_KEY" android:title="@string/pref_Alerts" android:summary="@string/pref_alerts_summary" />
 
 
         <ListPreference

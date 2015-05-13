@@ -44,9 +44,10 @@ public class GetPrescritionsMissingIntentService extends IntentService {
             {
                 Utils.carregaDados(preferences.getString(PreferencesActivity.USERNAME_KEY, null), getApplicationContext());
                 /* dar a notidicar que os dados foram actualizados */
-                setNotification(getResources().getString(R.string.carregaDadosTitle), getResources().getString(R.string.carregaDadosMessage));
+                if (Boolean.parseBoolean(preferences.getString(PreferencesActivity.PREFALERTS_KEY, "true"))) {
+                    setNotification(getResources().getString(R.string.carregaDadosTitle), getResources().getString(R.string.carregaDadosMessage));
+                }
                 startService(new Intent(getApplicationContext(),SetAlarmIntentService.class));
-
             }
             else
             {

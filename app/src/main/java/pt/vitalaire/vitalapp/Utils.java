@@ -1,5 +1,7 @@
 package pt.vitalaire.vitalapp;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
@@ -13,6 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -114,11 +117,14 @@ public class Utils {
     /*
     *  serve para saber se há ligação a Internet ou a Wifi
     * */
-    public static boolean hasConnectivityInternet(ConnectivityManager xConnMgr){
-        NetworkInfo networkinfo =  xConnMgr.getActiveNetworkInfo();
-        return (networkinfo != null && networkinfo.isConnected());
-
+    public static boolean isNetworkAvailable(Context xContext) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) xContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null;
     }
+
+
+
 
       /*
     *  serve para saber se há ligação a Wifi

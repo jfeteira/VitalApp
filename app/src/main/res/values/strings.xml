@@ -24,6 +24,12 @@
     <string name="pref_alerts_summary">Active automatic alerts</string>
     <string name="carregaDadosTitle">Notification Title</string>
     <string name="carregaDadosMessage">Message Load Data</string>
+    <string name="action_settings">Settings</string>
+    <string name="utentenumero">Nº Utente</string>
+    <string name="utentenome">Nome</string>
+    <string name="utenterecfalta">Total de Receitas em Falta</string>
+    <string name="recfaltadeleteok">Record has been successfully removed</string>
+    <string name="recfaltadeleteko">Not possible to remove record now, please try again later</string>
 
 
 </resources>

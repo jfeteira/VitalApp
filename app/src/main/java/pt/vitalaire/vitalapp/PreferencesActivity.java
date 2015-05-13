@@ -16,6 +16,8 @@ public class PreferencesActivity extends PreferenceActivity
     public static final String USERNAME_KEY = "USERNAME_KEY";
     public static final String PASSWORD_KEY = "PASSWORD_KEY";
     public static final String PREFSYNCFREQUENCY_KEY = "PREFSYNCFREQUENCY_KEY";
+    public static final String PREFALERTS_KEY = "PREFALERTS_KEY";
+
 
 
     @Override

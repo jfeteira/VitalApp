@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detalhe Paciente\nReceitas em falta"
+            android:text="Lista Pacientes\nreceitas em falta"
             android:id="@+id/textView2"
             android:layout_gravity="center"
             android:gravity="center"
@@ -30,47 +30,16 @@
 
     </LinearLayout>
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:background="@drawable/border_paciente">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="YYYYYYYYYYYY"
-            android:id="@+id/lbNomeUtente"
-            android:textStyle="bold"
-            android:typeface="sans"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="YYYYYYYYYYYY"
-            android:id="@+id/lbNumUtente"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ListView
-            android:id="@+id/lstViewrecFalta"
+            android:id="@+id/listViewPacientes"
             android:padding="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_set"
-            android:divider="@null"
             />
     </LinearLayout>
 
 </LinearLayout>
-
-
-

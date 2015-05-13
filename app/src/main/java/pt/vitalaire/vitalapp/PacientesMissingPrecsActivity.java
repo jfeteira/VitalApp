@@ -7,9 +7,12 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
+import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -27,10 +30,13 @@ public class PacientesMissingPrecsActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-            super.onCreate(savedInstanceState);
-            new getDataListAsyncTask().execute();
+        super.onCreate(savedInstanceState);
+    }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new getDataListAsyncTask().execute();
     }
 
     @Override
@@ -46,6 +52,7 @@ public class PacientesMissingPrecsActivity extends ListActivity {
         startActivity(intentToOpenDadosRecitasFaltasActivity);
 
     }
+
 
     /*==============================================================================================
     * AsyncTask para ir buscar os dados as tabelas da Base de dados
@@ -67,21 +74,27 @@ public class PacientesMissingPrecsActivity extends ListActivity {
             /**
              * @pt Se foi a primeira chamada, criar o adapter com os dados do cursor.
              */
+
+
+            _adapter = new PatientsAdapter(cursor);
+            PacientesMissingPrecsActivity.this.setListAdapter(_adapter);
+
+
+            /*
             if(_adapter == null)
             {
                 _adapter = new PatientsAdapter(cursor);
                 // Set adapter in the list.
                 PacientesMissingPrecsActivity.this.setListAdapter(_adapter);
             }
-            /**
-             * @pt Se já existir, colocar o novo cursor com possíveis novos dados.
-             */
+
             else
             {
                 // Stop using the old version of the temperatures in the cursor.
                 stopManagingCursor(_adapter.getCursor());
                 _adapter.changeCursor(cursor);
             }
+            */
         }
     }
 
@@ -113,12 +126,6 @@ public class PacientesMissingPrecsActivity extends ListActivity {
         @Override
         public void bindView(View v, final Context ctx, final Cursor cursor)
         {
-            /**
-             * Affect values of temperatures in each row of list.
-             *
-             * @pt Afectar valores de cada linha de registo na vista da Activity.
-             */
-
             ((TextView) v.findViewById(R.id.lbIdPaciente))
                     .setText(cursor.getString(cursor.getColumnIndex(PatientsContract.ID_UITENTE)));
 
@@ -134,9 +141,13 @@ public class PacientesMissingPrecsActivity extends ListActivity {
 
         }
 
+
+
         @Override
         public View newView(Context ctx, Cursor cursor, ViewGroup vg)
         {
+
+
             return getLayoutInflater().inflate(R.layout.list_utentes_prescriptionsmissing, null);
         }
     }
